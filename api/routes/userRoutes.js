@@ -22,6 +22,9 @@ router.post('/signup', async (req, res) => {
 
 // Login
 router.post('/login', async (req, res) => {
+    console.log('Request body:', req.body);
+    console.log('Headers:', req.headers);
+    
     const { email, password } = req.body;
     try {
         // Check if the user exists
